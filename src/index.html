@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Spaceknight PI</title>
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="icon" type="image/favicon.icon" href="../img/favicon.ico">
+  <link rel="icon" type="image/png" href="../img/android-chrome-192x192.png">
+
+  <!-- Let's use awesome Fonts for Icons -->
+  <script src="https://kit.fontawesome.com/785f2b83ae.js" crossorigin="anonymous"></script>
+
+  <!-- Reset all CSS -->
+  <!-- <link rel="stylesheet" href="../css/html5reset-1.6.1.css"> -->
+
+  <!-- Some CSS -->
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <!-- Some JavaScript -->
+  <script src="../js/cookies.js" async></script>
+  <script src="../js/top-nav.js" async></script>
+  <script src="../js/on-scroll.js" async></script>
+  <script src="../js/products.js" async></script>
+  <script src="../js/validate-feedback.js" async></script>
+  <script src="../js/likes.js" async></script>
+  <script src="../js/to-top.js" async></script>
+  <script src="../js/feedback.js" async></script>
+  <script src="../js/testimonials.js" async></script>
+  <script src="../js/evaluation.js" async></script>
+  <script src="../js/easter-egg.js" async></script>
+</head>
+
+<body>
+  <header class="header slide-down" id="header">
+    <nav class="top-nav" id="top-nav">
+      <a href="javascript:void(0);" id="burger" class="icon" onclick="burgerMenu()">
+        <i id="top-nav-icon" class="fa-solid fa-bars"></i>
+      </a>
+      <a href="#home" onclick="closeBurgerMenu()">Home</a>
+      <a href="#story" onclick="closeBurgerMenu()">Story</a>
+      <a href="#order" onclick="closeBurgerMenu()">Order</a>
+      <a href="#contact" onclick="closeBurgerMenu()">Contact</a>
+      <a href="shopping_cart.html">Cart</a>
+      <a href="about_us.html">About Us</a>
+    </nav>
+    <img id="spaceknight-pi-header" class="spaceknight-pi" src="../img/spaceknight_pi.png" alt="SpaceKnight PI">
+    <button onclick="location.href='shopping_cart.html'"><i class="fa-solid fa-cart-arrow-down"></i></button>
+  </header>
+
+  <main>
+    <section class="wrap-head-section">
+      <img class="spaceknight-pi" src="../img/spaceknight_pi.png" alt="SpaceKnight PI">
+      <h1 id="home">SpaceKnight PI</h1>
+      <img class="spaceknight-tau" src="../img/spaceknight_tau.png" alt="SpaceKnight Tau">
+    </section>
+
+    <div class="wrap-gamepad">
+      <i class="fa-solid fa-gamepad"></i>
+      <i class="fa-solid fa-gamepad"></i>
+      <i class="fa-solid fa-gamepad" onclick="easterEgg()"></i>
+      <i class="fa-solid fa-gamepad"></i>
+      <i class="fa-solid fa-gamepad"></i>
+    </div>
+
+    <section class="wrap-story-section">
+      <h2 id="story">Story</h2>
+      <p>Once upon a time the universe was in its balance.
+        Well protected by the spaceknights and the angels of the moon.
+        But one day, Xotar, arch enemy of the knights and angels managed to escape from his prison.</p>
+      <br>
+      <p>Will you help the Spaceknights PI and TAU do defeat Xotar and his hordes?</p>
+      <br>
+      <div>
+        <article>
+          <img src="../img/spaceangel.png" alt="Spaceangel">
+          <h6>Angels of the Moon</h6>
+          <p><br></p>
+          <p>"The angels of the moon will fight against Xotar and his hordes of evil.</p>
+          <p>For mother sun!"</p>
+          <br>
+        </article>
+        <article>
+          <img src="../img/xotar.png" alt="Xotar">
+          <h6>Xotar - Dark Emperor</h6>
+          <p>"Me, Xotar!</p>
+          <p>Doombringer and master of the universe will defeat the spaceknights and
+          kill all the angels of the moon!"</p>
+          <br>
+        </article>
+      </div>
+      <img src="../img/universe.jpg" alt="The Universe">
+    </section>
+
+    <div class="wrap-gamepad">
+      <i class="fa-solid fa-gamepad"></i>
+      <i class="fa-solid fa-gamepad"></i>
+      <i class="fa-solid fa-gamepad"></i>
+      <i class="fa-solid fa-gamepad"></i>
+      <i class="fa-solid fa-gamepad"></i>
+    </div>
+
+    <section class="wrap-order-section">
+      <h2 id="order">Order</h2>
+      <article>
+        <div class="wrap-article">
+          <img src="../img/dalle-space-knight.png" alt="Standard Edition" onclick="openModal('Standard Edition', 'StandardEdition')">
+          <div id="StandardEditionModal" class="modal">
+            <span id="StandardEditionClose" class="close" onclick="closeModal('StandardEdition');">&times;</span>
+            <img class="modal-content" src="../img/dalle-space-knight.png" alt="">
+            <div id="StandardEditionCaption" class="modal-caption"></div>
+          </div>
+          <div class="wrap-article-name">
+            <h3>Standard Edition</h3>
+            <h5><button disabled onclick="" id="standardLike" title="Standard Edition Like"><i class="fa-regular fa-thumbs-up"></i>
+            </button>&#8734; Likes</h5>
+          </div>
+        </div>
+        <div class="wrap-article-description">
+          <br>
+          <h5><i class="fa-solid fa-heart"></i> Standard Edition of Spaceknight PI<br></h5>
+          <h5><i class="fa-solid fa-heart"></i> Steam Bonus Content<br></h5>
+          <h5><i class="fa-regular fa-heart"></i> 2 Postcards<br></h5>
+          <h5><i class="fa-regular fa-heart"></i> Sticker set incl. 9 Stickers<br></h5>
+          <h5><i class="fa-regular fa-heart"></i> 2 Statues of PI and TAU<br></h5>
+          <br>
+          <div class="wrap-article-cost">
+            <h5><i class="fa fa-dollar"></i> 49</h5>
+            <h5><i class="fa fa-bitcoin"></i> 0.0025</h5>
+            <button onclick="" id="cartButtonStandard" title="Add Standard Edition to shopping cart">
+              <i class="fa-solid fa-cart-arrow-down"></i></button>
+          </div>
+        </div>
+      </article>
+      <article>
+        <div class="wrap-article">
+          <img src="../img/dalle-space-knight.png" alt="Steelbook Edition" onclick="openModal('Steelbook Edition', 'SteelbookEdition')">
+            <div id="SteelbookEditionModal" class="modal">
+              <span id="SteelbookEditionClose" class="close" onclick="closeModal('SteelbookEdition');">&times;</span>
+              <img class="modal-content" src="../img/dalle-space-knight.png" alt="">
+              <div id="SteelbookEditionCaption" class="modal-caption"></div>
+            </div>
+          <div class="wrap-article-name">
+            <h3>Steelbook Edition</h3>
+            <h5><button disabled onclick="" id="steelbookLike" title="Steelbook Edition Like"><i class="fa-regular fa-thumbs-up">
+            </i></button>&#8734; Likes</h5>
+          </div>
+        </div>
+        <div class="wrap-article-description">
+          <br>
+          <h5><i class="fa-solid fa-heart"></i> Standard Edition of Spaceknight PI<br></h5>
+          <h5><i class="fa-solid fa-heart"></i> Steam Bonus Content<br></h5>
+          <h5><i class="fa-solid fa-heart"></i> 2 Postcards<br></h5>
+          <h5><i class="fa-solid fa-heart"></i> Sticker set incl. 9 Stickers<br></h5>
+          <h5><i class="fa-regular fa-heart"></i> 2 Statues of PI and TAU<br></h5>
+          <br>
+          <div class="wrap-article-cost">
+            <h5><i class="fa fa-dollar"></i> 69</h5>
+            <h5><i class="fa fa-bitcoin"></i> 0.0035</h5>
+            <button onclick="" id="cartButtonSteelbook" title="Add Steelbook Edition to shopping cart">
+              <i class="fa-solid fa-cart-arrow-down"></i></button>
+          </div>
+        </div>
+      </article>
+      <article>
+        <div class="wrap-article">
+          <img src="../img/dalle-space-knight.png" alt="Collector's Edition" onclick="openModal('Collector\'s Edition', 'CollectorsEdition')">
+          <div id="CollectorsEditionModal" class="modal">
+            <span id="CollectorsEditionClose" class="close" onclick="closeModal('CollectorsEdition');">&times;</span>
+            <img class="modal-content" src="../img/dalle-space-knight.png" alt="">
+            <div id="CollectorsEditionCaption" class="modal-caption"></div>
+          </div>
+          <div class="wrap-article-name">
+            <h3>Collector's Edition</h3>
+            <h5><button disabled onclick="" id="collectorsLike" title="Collector's Edition Like"><i class="fa-regular fa-thumbs-up">
+            </i></button>&#8734; Likes</h5>
+          </div>
+        </div>
+        <div class="wrap-article-description">
+          <br>
+          <h5><i class="fa-solid fa-heart"></i> Standard Edition of Spaceknight PI<br></h5>
+          <h5><i class="fa-solid fa-heart"></i> Steam Bonus Content<br></h5>
+          <h5><i class="fa-solid fa-heart"></i> 2 Postcards<br></h5>
+          <h5><i class="fa-solid fa-heart"></i> Sticker set incl. 9 Stickers<br></h5>
+          <h5><i class="fa-solid fa-heart"></i> 2 Statues of PI and TAU<br></h5>
+          <br>
+          <div class="wrap-article-cost">
+            <h5> <i class="fa fa-dollar"></i> 129</h5>
+            <h5> <i class="fa fa-bitcoin"></i> 0.0065</h5>
+            <button onclick="" id="cartButtonCollector" title="Add Collector's Edition to shopping cart">
+              <i class="fa-solid fa-cart-arrow-down"></i></button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <div class="wrap-gamepad">
+      <i class="fa-solid fa-gamepad"></i>
+      <i class="fa-solid fa-gamepad"></i>
+      <i class="fa-solid fa-gamepad"></i>
+      <i class="fa-solid fa-gamepad"></i>
+      <i class="fa-solid fa-gamepad"></i>
+    </div>
+
+    <section class="wrap-contact-form">
+      <h2 id="contact">Contact</h2>
+      <form id="contact-form" method="post">
+        <h3>Get in touch with us -
+          <br>
+          let the spacecraft fly in our studio</h3>
+        <fieldset>
+          <label>
+            <input placeholder="Enter your name ..." type="text" maxlength="100" tabindex="1" required>
+          </label>
+        </fieldset>
+        <fieldset>
+          <label>
+            <input placeholder="Enter your email ..." type="email" maxlength="200" tabindex="2" required>
+          </label>
+        </fieldset>
+        <fieldset>
+          <label>
+            <input placeholder="Enter your subject ..." type="text" tabindex="3" required>
+          </label>
+        </fieldset>
+        <fieldset>
+          <label>
+            <textarea placeholder="Type your message here...." tabindex="4" required></textarea>
+          </label>
+        </fieldset>
+        <fieldset>
+          <button disabled name="submit" type="submit" id="contact-submit" data-submit="...Sending">SUBMIT</button>
+        </fieldset>
+      </form>
+
+      <br>
+
+      <h2 id="feedback">Feedback</h2>
+      <form name="feedback-form" id="feedback-form" method="post" onsubmit="alert('Feedback submitted!')">
+        <h3>Let us know what you think -
+          <br>
+          please provide us with Your feedback about our Website</h3>
+        <div id="error-box-name" class="error-box hidden"></div>
+        <fieldset>
+          <label>
+            <input id="feedback-name" name="feedback-name" placeholder="Enter your name ..." type="text" tabindex="5">
+          </label>
+        </fieldset>
+        <div id="error-box-email" class="error-box hidden"></div>
+        <fieldset>
+          <label>
+            <input id="feedback-email" name="feedback-email" placeholder="Enter your email ..." type="text" tabindex="6">
+          </label>
+        </fieldset>
+        <div id="error-box-rate-design" class="error-box hidden"></div>
+        <fieldset>
+          <label>
+            <input id="feedback-design" name="feedback-design" placeholder="Rate design (between 1 and 10) ..." type="text" tabindex="7">
+          </label>
+        </fieldset>
+        <div id="error-box-rate-components" class="error-box hidden"></div>
+        <fieldset>
+          <label>
+            <input id="feedback-components" name="feedback-components" placeholder="Rate components (between 1 and 10) ..." type="text" tabindex="8">
+          </label>
+        </fieldset>
+        <fieldset>
+          <label>
+            <textarea id="feedback-comment" placeholder="Let us know more (optional) ..." tabindex="9"></textarea>
+          </label>
+        </fieldset>
+        <fieldset>
+          <button name="submit" type="submit" onclick="if (validateFeedback()) { return postFeedback() } else { return false }" id="feedback-submit" data-submit="...Sending">SUBMIT</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <div class="wrap-additional-buttons">
+      <button onclick="createEvaluation()" type="button"  id="evaluation-feedback">Evaluation</button>
+      <button onclick="openTestimonials()" type="button"  id="testimonials-feedback">Testimonials</button>
+    </div>
+
+    <div class="container hidden"></div>
+
+    <button onclick="toTop()" class="up-button hidden" id="up-button" title="Go to top"><i id="arrow" class="fa fa-arrow-circle-o-up hidden"></i></button>
+  </main>
+
+  <footer class="footer sticky slide-up">
+    <img src="../img/pi-games.png" alt="PI Games Studio Logo">
+    <p><i class="fa-regular fa-copyright"></i>PI Games Studio</p>
+    <p>Made with <i class="fa-solid fa-heart rainbow"></i> in Bern</p>
+    <button onclick="window.open('https://twitter.com/SpaceknightPI','_blank')" class="twitter-button"><i class="fa-brands fa-square-twitter"></i></button>
+  </footer>
+
+</body>
+</html>

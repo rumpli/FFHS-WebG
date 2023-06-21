@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Spaceknight PI</title>
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="icon" type="image/favicon.icon" href="../img/favicon.ico">
+  <link rel="icon" type="image/png" href="../img/android-chrome-192x192.png">
+
+  <!-- Let's use awesome Fonts for Icons -->
+  <script src="https://kit.fontawesome.com/785f2b83ae.js" crossorigin="anonymous"></script>
+
+  <!-- Some CSS -->
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <!-- Some JavaScript -->
+  <script src="../js/to-top.js" async></script>
+  <script src="../js/top-nav.js" async></script>
+  <script src="../js/on-scroll.js" async></script>
+</head>
+
+<body>
+  <header class="header" id="header">
+    <nav class="top-nav" id="top-nav">
+      <a href="javascript:void(0);" id="burger" class="icon" onclick="burgerMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </a>
+      <a href="index.html#home">Home</a>
+      <a href="index.html#story">Story</a>
+      <a href="index.html#order">Order</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="shopping_cart.html">Cart</a>
+      <a href="about_us.html">About Us</a>
+    </nav>
+    <img id="spaceknight-pi-header" class="spaceknight-pi" src="../img/spaceknight_pi.png" alt="SpaceKnight PI">
+    <button onclick="location.href='shopping_cart.html'"><i class="fa-solid fa-cart-arrow-down"></i></button>
+  </header>
+
+  <main>
+    <section class="wrap-head-section">
+      <img class="spaceknight-pi" src="../img/spaceknight_pi.png" alt="SpaceKnight PI">
+      <h1 id="home">SpaceKnight PI</h1>
+      <img class="spaceknight-tau" src="../img/spaceknight_tau.png" alt="SpaceKnight Tau">
+    </section>
+
+    <div class="wrap-gamepad">
+      <i class="fa-solid fa-gamepad"></i>
+      <i class="fa-solid fa-gamepad"></i>
+      <i class="fa-solid fa-gamepad"></i>
+      <i class="fa-solid fa-gamepad"></i>
+      <i class="fa-solid fa-gamepad"></i>
+    </div>
+
+    <!-- Some shopping cart placeholders -->
+    <section>
+      <h1>Cart</h1>
+      <article>
+        <h3>Shopping Cart</h3>
+        <div>
+          <img src="../img/universe.jpg" alt="Standard Edition" width="200" height="120" style="float: left">
+          <h3>Standard Edition</h3>
+          <p>Standard Edition of Spaceknight PI, including Steam bonus Content</p>
+          <p>
+            <i class="fa fa-dollar"></i> 49
+            <i class="fa fa-bitcoin"></i> 0.0025
+          </p>
+          <input type="number" value="1" min="1" max="999" style="float: right;">
+        </div>
+      </article>
+      <article>
+        <div>
+          <img src="../img/universe.jpg" alt="Collector's Edition" width="200" height="120" style="float: left">
+          <h3>Collector's Edition</h3>
+          <p>Collector's Edition of Spaceknight PI, including Steam Bonus Content, 2 Postcards, a Sicker set containing 9 Stickers, and 2 awesome Statues of PI and TAU</p>
+          <p>
+            <i class="fa fa-dollar"></i> 129
+            <i class="fa fa-bitcoin"></i> 0.0065
+          </p>
+          <input type="number" value="1" min="1" max="999" style="float: right;">
+        </div>
+      </article>
+      <article>
+        <h3>Summary</h3>
+        <div>
+          <h5>Subtotal</h5><p><i class="fa fa-dollar"></i> 178</p>
+          <h5>Shipping</h5> <p> FREE</p>
+          <h5>Taxes</h5> <p><i class="fa fa-dollar"></i> 14</p>
+          <h4>Total</h4> <p><i class="fa fa-dollar"></i> 192</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="wrap-order-form">
+      <form id="order-form" method="post">
+        <h2>Shipping Information<br></h2>
+        <fieldset>
+          <label>
+            <input placeholder="Enter your Firstname ..." type="text" tabindex="1" required>
+          </label>
+        </fieldset>
+        <fieldset>
+          <label>
+            <input placeholder="Enter your Lastname ..." type="text" tabindex="2" required>
+          </label>
+        </fieldset>
+        <fieldset>
+          <label>
+            <input placeholder="Enter your email ..." type="email" tabindex="3" required>
+          </label>
+        </fieldset>
+        <fieldset>
+          <label>
+            <input placeholder="Enter your address ..." type="text" tabindex="4" required>
+          </label>
+        </fieldset>
+        <fieldset>
+          <label>
+            <input placeholder="Enter your ZIP Code ..." type="number" tabindex="5" required>
+          </label>
+        </fieldset>
+        <fieldset>
+          <label>
+            <input placeholder="Enter your town ..." type="text" tabindex="6" required>
+          </label>
+        </fieldset>
+        <fieldset>
+          <label>
+            <input placeholder="Enter your country ..." type="text" tabindex="7" required>
+          </label>
+        </fieldset>
+        <fieldset>
+          <label>
+            <input placeholder="Enter your mobile number ..." type="number" tabindex="8" required>
+          </label>
+        </fieldset>
+        <fieldset>
+          <input type="checkbox" id="policy" name="policy">
+          <label for="policy">I do accept the shop policy</label>
+          <br>
+          <input type="checkbox" id="confirm" name="confirm">
+          <label for="confirm">I confirm my order</label>
+        </fieldset>
+        <fieldset>
+          <button name="submit" type="submit" id="order-submit" data-submit="...Sending">ORDER</button>
+        </fieldset>
+      </form>
+    </section>
+    <button onclick="toTop()" class="up-button hidden" id="up-button" title="Go to top"><i id="arrow" class="fa fa-arrow-circle-o-up hidden"></i></button>
+  </main>
+
+  <footer class="footer sticky">
+    <img src="../img/pi-games.png" alt="PI Games Studio Logo">
+    <p><i class="fa-regular fa-copyright"></i>PI Games Studio</p>
+    <p>Made with <i class="fa-solid fa-heart"></i> in Bern</p>
+    <button onclick="window.open('https://twitter.com/SpaceknightPI','_blank')" class="twitter-button"><i class="fa-brands fa-square-twitter"></i></button>
+  </footer>
+
+</body>
+</html>

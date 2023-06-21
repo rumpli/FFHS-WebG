@@ -1,0 +1,892 @@
+/* ****************************** */
+/* Styling for mobile             */
+/* min-width: 250px               */
+/* min-height: 430px              */
+/* ****************************** */
+
+/* ============================== */
+/* Colors used in HEX:            */
+/* ======== MAIN COLORs ========= */
+/* - orange             #FFA500FF */
+/* - black              #000F     */
+/* - white              #FFFF     */
+/* ========= SECONDARY ========== */
+/* - whitesmoke         #F5F5F5FF */
+/* - yellow             #FFDB0DFF */
+/* - gold-orange        #E8810CFF */
+/* - skyblue            #87CEEBFF */
+/* ============================== */
+
+/* ============================== */
+/* Font: vt323-regular - latin    */
+/* ============================== */
+@font-face {
+    font-family: "VT323";
+    font-style: normal;
+    font-weight: 400;
+    src: url("fonts/vt323-v17-latin-regular.eot"); /* IE9 Compat Modes */
+    src:
+            local(""),
+            url("fonts/vt323-v17-latin-regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+            url("fonts/vt323-v17-latin-regular.woff2") format("woff2"), /* Super Modern Browsers */
+            url("fonts/vt323-v17-latin-regular.woff") format("woff"), /* Modern Browsers */
+            url("fonts/vt323-v17-latin-regular.ttf") format("truetype"), /* Safari, Android, iOS */
+            url("fonts/vt323-v17-latin-regular.svg#VT323") format("svg"); /* Legacy iOS */
+}
+
+/* ============================== */
+/* Defaults                       */
+/* ============================== */
+
+* {
+    font-family: "VT323", fantasy;
+    margin: auto;
+    font-size: 100%;
+    line-height: 1.5;
+    max-width: 1500px;
+}
+
+html {
+    scroll-padding-top: 6em;
+    max-width: unset;
+    background-image:
+            linear-gradient(6deg, #FFA500FF 98%, transparent 33%),
+            linear-gradient(3deg, #F5F5F5FF 98.5%, #000F 98.5%);
+    min-width: fit-content;
+}
+
+body {
+    display: grid;
+    margin: auto;
+    padding: 0;
+}
+
+html body {
+    height: 100%;
+}
+
+h1 {
+    color: #FFDB0D;
+    font-size: clamp(18px, 10vw, 90px);
+}
+
+h2 {
+    font-size: clamp(16px, 10vw, 60px);
+}
+
+h3 {
+    font-size: clamp(15px, 7vw, 40px);
+}
+
+h4 {
+    font-size: clamp(14px, 5vw, 28px);
+}
+
+h5 {
+    font-size: clamp(70%, 5vw, 25px);
+}
+
+h6 {
+    font-size: clamp(70%, 5vw, 20px);
+}
+
+p {
+    font-size: clamp(10px, 5vw, 32px);
+}
+
+a {
+    font-size: clamp(100%, 3vw, 32px);
+}
+
+input {
+    font-size: clamp(10px, 5vw, 32px);
+}
+
+button {
+    font-size: clamp(10px, 5vw, 32px);
+}
+
+/* Disable all buttons fully if the button is disabled */
+button:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+ul {
+    font-size: 120%;
+}
+
+label {
+    font-size: clamp(10px, 5vw, 32px);
+}
+
+.wrap-gamepad {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0.5em;
+    padding: clamp(10px, 2vw, 30px);
+    font-size: clamp(20px, 5vw, 70px);
+}
+
+.error-box {
+    display: block;
+    color: #FE0000;
+    padding: 2px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: clamp(10px, 5vw, 32px);
+}
+
+.sticky {
+    position: fixed;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.color-index {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.color-index > div {
+    display: flex;
+    flex-direction: row;
+}
+
+.canvas {
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.slide-down {
+    opacity: 0;
+    margin-top: -10%;
+    animation: slide-down 1s 0.2s ease-in-out forwards;
+}
+
+.slide-down-nav {
+    opacity: 0;
+    margin-top: -10%;
+    animation: slide-down 0.2s 0.2s ease-in-out forwards;
+}
+
+.slide-up {
+    opacity: 0;
+    margin-bottom: -10%;
+    animation: slide-up 1s 0.2s ease-in-out forwards;
+}
+
+.wrap-gamepad .fa-gift {
+    animation-name: up-down;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes up-down {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    to {
+        opacity: 1;
+        margin-bottom: 0;
+    }
+}
+
+@keyframes slide-down {
+    to {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+
+/* ============================== */
+/* Header styling                 */
+/* ============================== */
+
+.header {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    height: 7vh;
+    max-height: 3em;
+    min-height: 2em;
+    background: #FFFF;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 1;
+}
+
+.header img {
+    width: 2em;
+    align-self: center;
+    justify-content: center;
+    justify-self: flex-end;
+}
+
+.header button {
+    font-size: clamp(1em, 2vw, 2em);
+    margin-right: 1em;
+    background: #FFFF;
+    border: none;
+    cursor: pointer;
+}
+
+/* ============================== */
+/* Styling of the Head section    */
+/* ============================== */
+
+.wrap-head-section {
+    display: flex;
+    justify-content: space-evenly;
+    min-height: 4em;
+    max-height: 15em;
+}
+
+.wrap-head-section img {
+    width: 15vw;
+    max-width: 10em;
+}
+
+.wrap-head-section h1 {
+    align-self: center;
+    justify-content: center;
+}
+
+.wrap-head-section .spaceknight-pi {
+    align-self: center;
+    justify-content: center;
+}
+
+.wrap-head-section .spaceknight-tau {
+    align-self: center;
+    justify-content: center;
+}
+
+/* ============================== */
+/* Styling of the Story section   */
+/* ============================== */
+
+.wrap-story-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.wrap-story-section h2 {
+    align-self: center;
+    margin-bottom: 0.1em;
+}
+
+.wrap-story-section h6 {
+    text-align: center;
+}
+
+.wrap-story-section p {
+    padding-left: clamp(20px, 12vw, 150px);
+    padding-right: clamp(20px, 12vw, 150px);
+    text-align: center;
+}
+
+.wrap-story-section img {
+    display: flex;
+    align-self: center;
+    width: clamp(100px, 20vw, 300px);
+    height: 100%;
+}
+
+.wrap-story-section > img {
+    padding: 1vh clamp(20px, 12vw, 150px);
+    width: 90vw;
+    max-width: 1200px;
+}
+
+/* ============================== */
+/* Styling of the Order section   */
+/* ============================== */
+
+.wrap-order-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.wrap-order-section article {
+    padding: 1vh clamp(20px, 12vw, 150px);
+    margin: 0 1em 2em;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    justify-content: space-evenly;
+}
+
+.wrap-order-section .wrap-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.wrap-order-section .wrap-article ~ .wrap-article-description {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.wrap-article-description > h5 {
+    margin: 0;
+}
+
+.wrap-order-section h2 {
+    margin-bottom: 0.1em;
+    align-self: center;
+}
+
+.wrap-order-section h5 {
+    padding-left: 1em;
+    align-self: start;
+}
+
+.wrap-order-section p {
+    padding-left: 1em;
+    align-items: flex-end;
+    text-align: left;
+}
+
+.wrap-order-section img {
+    display: block;
+    width: 100%;
+    height: clamp(100px, 40vw, 500px);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.wrap-order-section img:hover {
+    opacity: 0.7;
+}
+
+.wrap-order-section button {
+    font-size: clamp(1em, 2vw, 2.5em);
+    margin-right: 1em;
+    align-items: flex-start;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.wrap-article-cost {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+}
+
+.wrap-article-cost button {
+    font-size: clamp(1em, 1.5em, 1.5em);
+}
+
+.wrap-article-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.wrap-article-name button {
+    font-size: 1em;
+}
+
+/* ============================== */
+/* Styling of modal images        */
+/* from W3Schools                 */
+/* ============================== */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    max-width: none;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0 0 0 / 90%);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90vh;
+    height: auto !important;
+}
+
+.modal-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #FFA500FF;
+    padding: 10px 0;
+    height: 150px;
+    font-size: clamp(14px, 5vw, 28px);
+}
+
+.modal-content, .modal-caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #F5F5F5FF;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #FFA500FF;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ============================== */
+/* Styling of contact/order form  */
+/* ============================== */
+
+.wrap-contact-form, .wrap-order-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: clamp(2em, 8vh, 3em);
+}
+
+.wrap-contact-form form, .wrap-order-form form {
+    margin: 0;
+    text-align: center;
+    padding-left: clamp(20px, 12vw, 150px);
+    padding-right: clamp(20px, 12vw, 150px);
+}
+
+.wrap-contact-form fieldset, .wrap-order-form fieldset {
+    border: none;
+}
+
+.wrap-contact-form h2 {
+    align-self: center;
+}
+
+.wrap-contact-form input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000F;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    resize: vertical;
+}
+
+.wrap-order-form input[type="text"], input[type="email"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000F;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    resize: vertical;
+}
+
+.wrap-contact-form button, .wrap-order-form button {
+    background-color: #000F;
+    color: #FFFF;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ============================== */
+/* Styling of additional buttons  */
+/* ============================== */
+
+.wrap-additional-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: clamp(2em, 8vh, 3em);
+}
+
+.wrap-additional-buttons button {
+    background-color: #000F;
+    color: #FFFF;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0;
+}
+
+
+/* ============================== */
+/* Footer styling                 */
+/* ============================== */
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 8vh;
+    max-height: 3em;
+    min-height: 2em;
+    background-color: #FFFF;
+    bottom: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+/* The linter can only check CSS and not the DOM itself                */
+/* therefore, as recommended, it will be disabled for the              */
+/* following line                                                      */
+/* => https://stylelint.io/user-guide/rules/no-descending-specificity/ */
+
+/* stylelint-disable no-descending-specificity */
+.footer img {
+    align-self: center;
+    height: 8vh;
+    max-height: 3em;
+    min-height: 2em;
+    margin-left: 0.5em;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+/* stylelint-enable no-descending-specificity */
+
+.footer p {
+    text-align: center;
+    flex-grow: 2;
+    font-size: clamp(50%, 3vw, 300%);
+}
+
+.footer button {
+    align-self: center;
+    border: none;
+    background: transparent;
+    margin-right: 0.5em;
+}
+
+.footer .twitter-button {
+    margin-right: 0.5em;
+    font-size: clamp(20px, 3vw, 50px);
+    cursor: pointer;
+}
+
+.footer .fa-copyright {
+    font-size: 80%;
+    padding: 1vh;
+}
+
+.footer .fa-heart {
+    color: #FE0000;
+}
+
+.rainbow:hover, .wrap-gamepad .fa-gamepad:hover {
+    background:
+        linear-gradient(
+                180deg,
+                #FE0000 16.66%,
+                #FD8C00 16.66%,
+                #FD8C00 33.32%,
+                #FFE500 33.32%,
+                #FFE500 49.98%,
+                #119F0B 49.98%,
+                #119F0B 66.64%,
+                #0644B3 66.64%,
+                #0644B3 83.3%,
+                #C22EDC 83.3%
+        );
+    /* CSS linter would like to have background-clip */
+    /* but seems its not working...so we use webkit  */
+
+    /* stylelint-disable property-no-vendor-prefix */
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    /* stylelint-enable property-no-vendor-prefix */
+}
+
+.up-button {
+    display: flex;
+    position: sticky;
+    bottom: 3em;
+    float: right;
+    background: transparent;
+    border: none;
+    font-size: clamp(20px, 3vw, 50px);
+    cursor: pointer;
+    margin-right: 0.5em;
+}
+
+.up-button:hover {
+    color: #E8810C;
+}
+
+/* ============================== */
+/* Navigation styling             */
+/* ============================== */
+
+.top-nav {
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+}
+
+.top-nav a {
+    display: none;
+    float: left;
+    color: #FFA500FF;
+    background: #FFFF;
+    text-align: center;
+    text-decoration: none;
+}
+
+.top-nav a.icon {
+    display: flex;
+    background: #FFFF;
+    margin-left: 1em;
+}
+
+/* ============================== */
+/* Responsive navigation styling  */
+/* ============================== */
+
+.top-nav.responsive {
+    position: absolute;
+    margin-top: 0;
+}
+
+.top-nav.responsive a {
+    display: flex;
+    background: #FFFF;
+    margin: 0;
+    padding: 1vh 3vw;
+    text-align: center;
+    text-decoration: none;
+    border-bottom-left-radius: 0;
+}
+
+.top-nav.responsive a.icon {
+    position: absolute;
+    padding: 0;
+}
+
+/* ================================= */
+
+.top-nav a:hover {
+    background-color: #E8810C;
+    color: #000F;
+}
+
+.top-nav a:active {
+    background-color: #E8810C;
+    color: #FFFF;
+}
+
+.top-nav a:nth-child(2){
+    border-bottom-left-radius: 20px;
+}
+
+.top-nav.responsive a:nth-child(2){
+    border-bottom-left-radius: 0;
+}
+
+.top-nav.responsive a:last-child {
+    border-bottom-right-radius: 20px;
+}
+
+.wrap-contact-form button:hover, .wrap-additional-buttons button:hover {
+    background: #E8810C;
+    color: #000F;
+}
+
+.twitter-button .fa-square-twitter:hover {
+    color: #87CEEBFF;
+}
+
+.header button:hover {
+    color: #FFA500FF;
+}
+
+.wrap-order-section button:hover:enabled {
+    color: #F5F5F5FF;
+}
+
+/* ============================== */
+/* Styling of About us section    */
+/* ============================== */
+
+.wrap-about-us-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.wrap-about-us-section h2 {
+    align-self: center;
+    margin-bottom: 5vh;
+}
+
+.wrap-about-us-section p {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    text-align: center;
+}
+
+/* ================================ */
+/* Media queries for bigger screens */
+/* ================================ */
+/* Improvements needed to document  */
+/* which devices they target        */
+/* ================================ */
+/* Media queries for <600px         */
+/* -- bigger Mobile Screens         */
+/* ================================ */
+@media screen and (min-width: 600px) {
+    html {
+        background-image:
+                linear-gradient(6deg, #FFA500FF 97%, transparent 33%),
+                linear-gradient(3deg, #F5F5F5FF 98%, #000F 98%);
+    }
+
+    .top-nav {
+        flex-direction: row;
+        justify-content: space-evenly;
+        justify-self: center;
+        flex-grow: 2;
+        margin: 0;
+    }
+
+    .top-nav a {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        text-decoration: none;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .top-nav .icon {
+        display: none !important;
+    }
+
+    .header {
+        max-height: 5em;
+        min-height: 5em;
+        align-items: stretch;
+    }
+
+    .header img {
+        display: none;
+    }
+
+    .footer {
+        max-height: 4em;
+        min-height: 4em;
+    }
+
+    .footer img {
+        max-height: 4em;
+    }
+
+    .wrap-story-section div {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .wrap-story-section article {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 0;
+        margin-top: 0;
+    }
+}
+
+/* ================================ */
+/* Media queries for <1200px        */
+/* -- Desktop                       */
+/* ================================ */
+
+@media screen and (min-width: 1200px) {
+    html {
+        background-image:
+                linear-gradient(6deg, #FFA500FF 95%, transparent 33%),
+                linear-gradient(3deg, #F5F5F5FF 97%, #000F 97%);
+    }
+
+    .wrap-order-section {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin: 0;
+        padding-left: clamp(20px, 12vw, 150px);
+        padding-right: clamp(20px, 12vw, 150px);
+    }
+
+    .wrap-order-section h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 100%;
+    }
+
+    .wrap-order-section h5 {
+        padding-right: 1em;
+    }
+
+    .wrap-order-section article {
+        display: flex;
+        flex-flow: wrap row;
+        padding: 0;
+        flex: 50%;
+        max-width: 45%;
+    }
+
+    .container {
+        flex-direction: row;
+    }
+
+    .color-index {
+        flex-flow: column wrap;
+    }
+}
